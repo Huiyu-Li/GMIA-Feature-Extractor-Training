@@ -1,6 +1,6 @@
 ## GMIA-Feature Extractor Training &mdash; Official PyTorch implementation
 
-![Teaser image](./docs/feature_extractor_training.png =100x100)
+![Teaser image](./docs/feature_extractor_training.png | width=100)
 
 **Generative Medical Image Anonymization Based on Latent Code Projection and Optimization**<br>
 Huiyu Li, Nicholas Ayache, Hervé Delingette<br>
