@@ -12,13 +12,13 @@ https://inria.hal.science/tel-04875160<br> (Chapter3-4)
 
 ## Getting started
 
-## Preparing datasets
+## Preparing Datasets
 **MIMIC-CXR-JPG**:
 Step 1: Download the [MIMIC-CXR-JPG dataset](https://physionet.org/content/mimic-cxr-jpg/2.1.0/).
 
 Step 2: Dataset Pre-processing accoring to the [repository](https://github.com/Huiyu-Li/GMIA-Dataset-Pre-processing/tree/main).
 
-## Training the networks
+## Training the Networks
 
 ### Identity network training
 Train the idenity network on the original dataset.<br>
@@ -42,7 +42,7 @@ Train the utility network on the anonymized dataset.<br>
 python3 ./Model_Pretrain/utilityA_classification_CheXclusion_uDense.py
 ```
 
-## Evaluating the networks
+## Evaluating the Networks
 ### Identity network evaluation
 Evaluate the identity network on the original dataset.<br>
 ```.bash
@@ -70,12 +70,23 @@ Evaluate the utility network on the anonymized dataset.<br>
 python3 ./Evaluate/utilityA_eval_CheXclusion_uDense.py
 ```
 
+### Privacy Metrics
+Calculate the privacy metrics in the identity feature space.<br>
+```.bash
+python3 ./Privacy_Metrics/main_identity.py
+```
+
+Calculate the privacy metrics in the latent space.<br>
+```.bash
+python3 ./Privacy_Metrics/main_latent.py
+```
+
 References:
 1. [Distributed Arcface Training in Pytorch](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch) 
 2. [Densely Connected Convolutional Networks](https://arxiv.org/pdf/1608.06993.pdf)
 3. [libauc.models.densenet](https://docs.libauc.org/_modules/libauc/models/densenet.html#DenseNet)
 4. [Large-scale robust deep auc maximization: A new surrogate loss and empirical studies on medical image classification](https://arxiv.org/abs/2012.03173)
-
+5. [Avatar](https://github.com/octopize/avatar-paper)
 
 ## Citation
 
