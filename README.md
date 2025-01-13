@@ -1,6 +1,6 @@
 ## GMIA-Feature Extractor Training &mdash; Official PyTorch implementation
 
-![Teaser image](./docs/feature_extractor_training.png)
+![Teaser image](./docs/feature_extractor_training.png =100x100)
 
 **Generative Medical Image Anonymization Based on Latent Code Projection and Optimization**<br>
 Huiyu Li, Nicholas Ayache, Hervé Delingette<br>
@@ -43,7 +43,7 @@ python3 ./Model_Pretrain/utilityA_classification_CheXclusion_uDense.py
 ```
 
 ## Evaluating the networks
-
+### Identity network evaluation
 Evaluate the identity network on the original dataset.<br>
 ```.bash
 python3 ./Evaluate/identity_eval.py
@@ -59,6 +59,7 @@ Evaluate the Outer linability risk of the anonymized dataset.<br>
 python3 ./Evaluate/identityO_eval.py
 ```
 
+### Utility network evaluation
 Evaluate the utility network on the original dataset.<br>
 ```.bash
 python3 ./Evaluate/utility_eval_CheXclusion_uDense.py
@@ -70,11 +71,10 @@ python3 ./Evaluate/utilityA_eval_CheXclusion_uDense.py
 ```
 
 References:
-1. [GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium](https://arxiv.org/abs/1706.08500), Heusel et al. 2017
-2. [Demystifying MMD GANs](https://arxiv.org/abs/1801.01401), Bi&nacute;kowski et al. 2018
-3. [Improved Precision and Recall Metric for Assessing Generative Models](https://arxiv.org/abs/1904.06991), Kynk&auml;&auml;nniemi et al. 2019
-4. [Improved Techniques for Training GANs](https://arxiv.org/abs/1606.03498), Salimans et al. 2016
-5. [A Style-Based Generator Architecture for Generative Adversarial Networks](https://arxiv.org/abs/1812.04948), Karras et al. 2018
+1. [Distributed Arcface Training in Pytorch](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch) 
+2. [Densely Connected Convolutional Networks](https://arxiv.org/pdf/1608.06993.pdf)
+3. [libauc.models.densenet](https://docs.libauc.org/_modules/libauc/models/densenet.html#DenseNet)
+4. [Large-scale robust deep auc maximization: A new surrogate loss and empirical studies on medical image classification](https://arxiv.org/abs/2012.03173)
 
 
 ## Citation
